@@ -1,0 +1,16 @@
+# build.yaml
+
+targets:
+  $default:
+    builders:
+      icon_mapper_generator:
+        generate_for:
+          - lib/generators/icon_mapper_generator/triggers/icon_mapper_generator_trigger.dart # fake triggers file
+
+builders:
+  icon_mapper_generator:
+    import: "package:icon_data_parser/generators/icon_mapper_generator/icon_mapper_generator_builder.dart"
+    builder_factories: ["iconMapperGeneratorBuilder"]
+    build_extensions: { "\$package\$": ["lib/generators/icon_scanner/*.dart"] }
+    auto_apply: dependents
+    build_to: source
