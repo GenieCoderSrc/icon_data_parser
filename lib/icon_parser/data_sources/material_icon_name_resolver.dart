@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../lib/data/data_sources/i_data_sources/data_sources/icon_name_resolver.dart';
-import '../../../../lib/data/data_sources/i_data_sources/data_sources/material_icons_mapping.dart';
+import 'package:icon_data_parser/generated/material_icons_mapping.dart';
+import 'package:icon_data_parser/icon_parser/i_data_sources/icon_name_resolver.dart';
 
 class MaterialIconNameResolver implements IIconNameResolver {
   @override
