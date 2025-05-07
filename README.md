@@ -21,7 +21,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  icon_data_parser: ^0.0.1
+  icon_data_parser: latest_version
 ```
 
 Then run:
@@ -154,4 +154,4 @@ Issues and PRs are welcome! Please ensure code formatting and tests pass before 
 
 ## Maintainers
 
-This package is maintained by \[Your Name].
+This package is maintained by Shohidul Islam.

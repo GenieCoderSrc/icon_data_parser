@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:icon_data_parser/icon_parser/extensions/icon_data_extension.dart';
-import 'package:icon_data_parser/icon_parser/extensions/code_point_extension.dart';
+import 'package:icon_data_parser/icon_data_parser.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     IconData icon = Icons.access_alarm;
-    String? iconName = icon.materialIconName;
+    String? iconName = icon.name;
     int codePoint = icon.codePoint;
     String? iconNameFromCode = codePoint.iconName;
 
