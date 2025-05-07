@@ -1,9 +1,0 @@
-enum CommunicationIcons {
-  phone,
-  email,
-}
-
-
-
-
-
