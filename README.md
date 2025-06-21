@@ -1,27 +1,27 @@
-# icon\_data\_parser
+# icon_data_parser
 
-A Dart package to parse and map Flutter Material Icons, providing bidirectional lookups between `IconData`, icon names, and code points. Ideal for Flutter projects that require custom icon tooling, code generation, or runtime icon inspection.
+A Dart utility package to parse and resolve Flutter Material `IconData` information, providing bidirectional lookups between icon names and code points. Useful for Flutter applications that require dynamic icon rendering, inspection, or metadata utilities.
 
 ---
 
-## Features
+## ✨ Features
 
 * 🔍 Map `IconData` to its corresponding Material icon name
-* 🔢 Convert icon code points to icon names
-* 📦 Automatically generate icon mappings from the Flutter SDK source
-* 🛠️ Builder-based generation for integration in `build_runner` workflows
+* 🔢 Convert code points to icon names and vice versa
+* 📄 Utility extensions for easier runtime access to icon names
+* 📚 Custom icon name resolvers for advanced use cases
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-### Installation
+### 📦 Installation
 
 Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  icon_data_parser: latest_version
+  icon_data_parser: ^latest_version
 ```
 
 Then run:
@@ -32,7 +32,7 @@ flutter pub get
 
 ---
 
-## Usage
+## ⚙️ Usage
 
 ### 1. Get Icon Name from IconData
 
@@ -62,50 +62,7 @@ String? name = resolver.resolveIconName(Icons.abc);
 
 ---
 
-## Code Generation
-
-You can generate mappings from Flutter's `icons.dart` using the provided script or via `build_runner`.
-
-### Manual Script (example)
-
-```dart
-void main() async {
-  final materialIconsFile = File('path/to/flutter/packages/flutter/lib/src/material/icons.dart');
-
-  final iconsContent = await materialIconsFile.readAsLines();
-  final iconMappings = <String, int>{};
-
-  for (final line in iconsContent) {
-    final trimmed = line.trim();
-    final match = RegExp(r'static const IconData (\w+) = IconData\((0x[a-fA-F0-9]+),').firstMatch(trimmed);
-    if (match != null) {
-      final iconName = match.group(1)!;
-      final codePoint = int.parse(match.group(2)!);
-      iconMappings[iconName] = codePoint;
-    }
-  }
-
-  await _generateMaterialIconsMapping(iconMappings);
-}
-```
-
-### Generated Output
-
-```dart
-class MaterialIconsMapping {
-  static const Map<int, String> iconCodePointToName = {
-    57344: 'ten_k',
-    59136: 'ten_k_sharp',
-    62687: 'ten_k_rounded',
-    60914: 'ten_k_outlined',
-    // more icons...
-  };
-}
-```
-
----
-
-## Extensions
+## 🔄 Extensions
 
 ### IconData Extension
 
@@ -127,31 +84,26 @@ extension CodePointToIconName on int {
 
 ---
 
-## Build System Integration
+## 🎓 Use Cases
 
-A build system-based implementation is also available using `build_runner`. It automatically scans and generates:
-
-* `icon_maps/material_icons_mapper.g.dart`
-* `icon_maps/material_icon_data_map.g.dart`
-
-```bash
-flutter pub run build_runner build
-```
+* Icon name display or debugging tools
+* Dynamic rendering of icon buttons or lists
+* Icon search features in design tools or editors
 
 ---
 
-## License
+## 📜 License
 
 MIT License
 
 ---
 
-## Contributions
+## 👨‍👷 Maintainer
 
-Issues and PRs are welcome! Please ensure code formatting and tests pass before submitting.
+This package is maintained by [Shohidul Islam](https://github.com/ShohidulProgrammer).
 
 ---
 
-## Maintainers
+## 🤝 Contributions
 
-This package is maintained by Shohidul Islam.
+Issues and PRs are welcome! Please format code and ensure tests pass before submitting.
