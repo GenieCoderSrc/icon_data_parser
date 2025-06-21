@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.2+1
+- Use `build` ^2.5.3 in the dev_dependencies
+
 ## 0.0.2
 - Initial Release
 

@@ -9,3 +9,9 @@ builders:
     auto_apply: root_package
     build_to: source
     applies_builders: []
+
+
+
+# To generate icons data mapper, Run this command on the project terminal
+#flutter pub run build_runner clean
+#flutter pub run build_runner build --delete-conflicting-outputs
