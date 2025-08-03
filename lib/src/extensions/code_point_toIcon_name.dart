@@ -7,8 +7,8 @@ extension CodePointToIconName on int {
     return materialIcons.entries
         .firstWhere(
           (entry) => entry.value == this,
-      orElse: () => const MapEntry('', 0),
-    )
+          orElse: () => const MapEntry('', 0),
+        )
         .key
         .takeIf((key) => key.isNotEmpty);
   }
