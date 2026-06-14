@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+
+
+
+
 ## 0.0.4
 
 ### Aug 22, 2025
@@ -43,3 +47,4 @@ All notable changes to this project will be documented in this file.
 * Interface for custom icon name resolvers (`IIconNameResolver`).
 * `MaterialIconNameResolver` for resolving Material icon names.
 * Generated mapping support: `material_icons_mapping.dart`.
+
