@@ -20,6 +20,8 @@ A Dart utility package to parse and resolve Flutter Material `IconData` informat
 Add this to your `pubspec.yaml`:
 
 ```yaml
+resolution: workspace
+
 dependencies:
   icon_data_parser: ^latest_version
 ```
