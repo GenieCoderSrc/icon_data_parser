@@ -1,0 +1,12 @@
+name: icon_data_parser
+description: "A Dart package for parsing and resolving Flutter Material icon names from IconData or code points, with support for code generation and runtime lookup."
+version: 0.0.4
+homepage: https://github.com/GenieCoderSrc/icon_data_parser
+repository: https://github.com/GenieCoderSrc/icon_data_parser
+issue_tracker: https://github.com/GenieCoderSrc/icon_data_parser/issues
+
+
+environment:
+  sdk: \x27>=3.6.0 <4.0.0\x27
+  resolution: workspace
+    flutter: ">=3.0.0"
